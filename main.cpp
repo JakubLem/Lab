@@ -4,6 +4,7 @@ Plik main.cpp
 Data: 
 */
 //test z kompa
+//test z lapka
 
 #include "punkt2.h"
 #include "polygon.h"
