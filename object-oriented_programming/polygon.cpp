@@ -64,3 +64,5 @@ double Polygon::countTriangleArea() {
 	return result;
 }
 
+Polygon::~Polygon() {}
+

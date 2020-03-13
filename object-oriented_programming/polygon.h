@@ -56,6 +56,8 @@ public:
 	//Funckja licz¹ca pole dowolnej figury wypuk³ej
 	double countTriangleArea();
 
+	~Polygon();
+
 	
 
 };
