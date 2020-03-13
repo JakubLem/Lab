@@ -39,5 +39,8 @@ public:
 	double getDistance(Punkt2 p);
 	double PoleTrojkota(Punkt2 p1, Punkt2 p2, Punkt2 p3);
 
+
+	//destruktor
+	~Punkt2();
 };
 

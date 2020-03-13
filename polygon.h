@@ -18,7 +18,7 @@ public:
 
 	//konstruktory -> brak domyœlnego 
 	Polygon(int count, Punkt2* vertices);
-	Polygon(Polygon& p);
+	//Polygon(Polygon& p);
 	//! Metoda konstruuj¹ca tablicê wierzcho³ków.
 	/*!
 	  \param _vertices  argument typu Punkt*  przekazuj¹cy tablicê wierzcho³ków wielok¹ta

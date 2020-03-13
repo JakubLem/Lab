@@ -27,7 +27,6 @@ int main() {
 	cout << "punkt.getRadius(): " << punkt.getRadius() << endl;
 	cout << "punkt.getAngle(): " << punkt.getAngle() << endl;
 	cout << "punkt.getDistance(p2): " << punkt.getDistance(punkt2) << endl;
-
 	//wywo�anie konstruktora domy�lnego
 	Punkt2 test = Punkt2(); 
 

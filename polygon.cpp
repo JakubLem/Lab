@@ -20,14 +20,14 @@ Polygon::Polygon(int _count, Punkt2* _vertices) {
 		vertices[i] = _vertices[i];
 	}
 }
-
+/*
 Polygon::Polygon(Polygon& p) {
 	count = p.count;
 	for (int i = 0; i < p.count; i++) {
 		vertices[i] = p.vertices[i];
 	}
 }
-
+*/
 void Polygon::setVertices(Punkt2* _vertices, int _count) {
 	vertices = _vertices;
 	count = _count;
