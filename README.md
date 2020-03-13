@@ -10,6 +10,6 @@ Nr w dzienniku: 11
 
 IT WORKS
 
-^\\_(*-*)_/^
+^\\__(**-**)__/^
 
 ON MY MACHINE
