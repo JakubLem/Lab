@@ -76,6 +76,6 @@ double Punkt2::PoleTrojkota(Punkt2 p1, Punkt2 p2, Punkt2 p3) {
 	double p = (a + b + c) / 2;
 	return sqrt((p - a) * (p - b) * (p - c));
 }
+Punkt2::~Punkt2() {}
 
 
-Punkt2::~Punkt2(){}
