@@ -3,7 +3,7 @@ Jakub Lemiesiewicz klasa 3D
 Plik main.cpp
 Data: 
 */
-
+//test z kompa
 
 #include "punkt2.h"
 #include "polygon.h"
@@ -12,11 +12,11 @@ Data:
 using namespace std;
 int main() {
 	//Punkt2
-	//definicja dwóch punktów wspó³rzêdnych
+	//definicja dwï¿½ch punktï¿½w wspï¿½rzï¿½dnych
 	Punkt2 punkt = Punkt2(1.0,2.0);
 	Punkt2 punkt2 = Punkt2(3.0, 2.0);
 
-	//Dzia³ania metod klasy
+	//Dziaï¿½ania metod klasy
 	
 	cout << "---------" << endl << "Punkt2" << endl << "---------" << endl;
 	cout << "Punkt2 punkt = Punkt2(1.0,2.0);" << endl;
@@ -27,12 +27,12 @@ int main() {
 	cout << "punkt.getAngle(): " << punkt.getAngle() << endl;
 	cout << "punkt.getDistance(p2): " << punkt.getDistance(punkt2) << endl;
 
-	//wywo³anie konstruktora domyœlnego
+	//wywoï¿½anie konstruktora domyï¿½lnego
 	Punkt2 test = Punkt2(); 
 
 
 	//Polygon
-	//Tworzenie listy punktów z których chcemy utworzyæ polygon
+	//Tworzenie listy punktï¿½w z ktï¿½rych chcemy utworzyï¿½ polygon
 	Punkt2 p1 = Punkt2(6.5,7.0);
 	Punkt2 p2 = Punkt2(1.0,1.0);
 	Punkt2 p3 = Punkt2(3.0,-8.0);
