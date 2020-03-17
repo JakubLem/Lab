@@ -11,6 +11,7 @@ Data: 15.03.2020
 #include <iostream>
 #include <vector>
 #include <cstdio>
+#include <initializer_list>
 
 using namespace std;
 int main() {
@@ -54,6 +55,9 @@ int main() {
 	Punkt2* coords = new Punkt2[4]{ Punkt2(0.0,0.0), Punkt2(1.0,0.0) ,Punkt2(1.0,1.0), Punkt2{0.0,1.0}};
 	Polygon kwadrat = Polygon(4,coords);
 	Punkt2 w1 = kwadrat[2];
+	cout << "kwadrat[3]:"<<kwadrat[3];
+	kwadrat[3] = { 13,2 };
+	cout << "kwadrat[3]: " << kwadrat[3];
 
 	cout << endl << "test" << endl;
 	cout << "w1.getX(): " <<w1.getX() <<endl;
@@ -68,5 +72,31 @@ int main() {
 		cout << quan[i].getX() << endl;
 		cout << quan[i].getY() << endl;
 	}
+	
+	//testowanie operatora cout
+	cout << endl << "//testowanie operatora cout" << endl;
+	cout << w1<<endl;
+
+	//testowanie initializer_list
+	/*int*/
+
+	Punkt2 objl = { 12.0,3.0 };
+
+
+	/*Punkt2*/
+	initializer_list<Punkt2> Punkt2_list = { {13.0,2.0},{2.0,4.0}, };
+	cout << endl << "initializer_list<Punkt2> Punkt2_list = { {13.0,2.0},{2.0,4.0}, };" << endl;
+	/*Testowanie objektu*/
+	cout << "Punkt2_list.size(): " <<Punkt2_list.size() << endl;
+	cout << "Punkt2_list.begin()->getX(): " << Punkt2_list.begin()->getX();
+	/*------------------*/
+
+	/*Tworzenie obiektu korzystając z konstruktora*/
+	Polygon next_i_l = Polygon(Punkt2_list);
+	cout << endl<<"Wypisywanie polygona (test)"<<endl<<next_i_l<<endl;
+
+
+	cout << next_i_l[1];
+
 	return 0;
 }

@@ -10,6 +10,8 @@ Data: 15.03.2020
 #include <cmath>
 #include <ctime>
 #include <cstdlib>
+#include <initializer_list>
+#include <vector>
 using namespace std;
 
 
@@ -35,10 +37,33 @@ Polygon::Polygon(int quantity) {
 
 Polygon::Polygon(const Polygon& p) {
 	count = p.count;
+	vertices = new Punkt2[count];
 	for (int i = 0; i < p.count; i++) {
 		vertices[i] = p.vertices[i];
 	}
 }
+
+//Konstruktor z initializer_list
+
+Polygon::Polygon(initializer_list<Punkt2> list) {
+	count = list.size();
+	vertices = new Punkt2[count];
+	int i = 0;
+	for (auto obj: list) {
+		vertices[i] = obj;
+		i++;
+	}
+}
+
+/*Operator cout<<*/
+ostream& operator<<(ostream& os, const Polygon& obj) {
+	os << endl;
+	for (int i = 0; i < obj.count; i++) {
+		os << " " << i << ": "<<obj.vertices[i] <<endl;
+	}
+	return os;
+}
+
 
 void Polygon::setVertices(Punkt2* _vertices, int _count) {
 	vertices = _vertices;

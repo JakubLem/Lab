@@ -3,8 +3,10 @@ Jakub Lemiesiewicz klasa 3D
 Plik punkt2.h
 Data: 15.03.2020
 */
-
 #pragma once
+
+#include<ostream>
+using namespace std;
 class Punkt2
 {
 	double x{ 0.0 };
@@ -19,8 +21,13 @@ public:
 
 	//konstruktory
 	Punkt2(); //domyœlny
+	Punkt2(double cord); //z jednym doublem
 	Punkt2(double _x, double _y);
 	Punkt2(const Punkt2& p); //kopiuj¹cy
+	//Punkt2(); 
+
+	//cout<<
+	friend ostream& operator<<(ostream& os, const Punkt2& obj);
 	
 	//operatory
 	Punkt2 operator+(const Punkt2& p) const;

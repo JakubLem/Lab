@@ -12,6 +12,11 @@ Punkt2::Punkt2() {
 	y = 0.0;
 }
 
+Punkt2::Punkt2(double coord) {
+	x = coord;
+	y = coord;
+}
+
 //konstruktor tworz¹cy 
 Punkt2::Punkt2(double _x, double _y) {
 	x = _x;
@@ -45,6 +50,14 @@ Punkt2& Punkt2::operator=(const Punkt2& p) {
 double Punkt2::operator*(const Punkt2& p) const {
 	return ((x * p.getX()) + (y * p.getY()));
 }
+
+//cout<<
+ostream& operator<<(ostream& os, const Punkt2& obj)
+{
+	os << "( " << obj.x << ", " << obj.y << " )";
+	return os;
+}
+
 
 void Punkt2::setX(double _x)
 {

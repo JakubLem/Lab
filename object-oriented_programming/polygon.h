@@ -7,6 +7,8 @@ Data: 15.03.2020
 #ifndef POLYGON_H
 #define POLYGON_H
 #include "punkt2.h"
+#include <initializer_list>
+#include <vector>
 
 class Polygon
 {
@@ -20,6 +22,8 @@ public:
 	Polygon(int count, Punkt2* vertices);
 	Polygon(int quantity);
 	Polygon(const Polygon& p);
+	Polygon(initializer_list<Punkt2> list);
+
 	//! Metoda konstruuj¹ca tablicê wierzcho³ków.
 	/*!
 	  \param _vertices  argument typu Punkt*  przekazuj¹cy tablicê wierzcho³ków wielok¹ta
@@ -44,10 +48,6 @@ public:
 	  \sa setVeritces()
 	*/
 
-
-
-
-
 	void setCount(int n);
 	double getPerimeter();/*!< Metoda obliczaj¹ca obwód wielok¹ta */
 
@@ -57,6 +57,8 @@ public:
 	//Funckja licz¹ca pole dowolnej figury wypuk³ej
 	double countTriangleArea();
 
+	//operator cout
+	friend std::ostream& operator<<(std::ostream& os, const Polygon& obj);
 
 	Punkt2& operator[](int i);
 
