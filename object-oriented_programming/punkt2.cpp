@@ -1,7 +1,7 @@
 /*
 Jakub Lemiesiewicz klasa 3D
 Plik punkt2.cpp
-Data: 
+Data: 15.03.2020
 */
 #include "punkt2.h"
 #include <cmath>
@@ -31,11 +31,20 @@ Punkt2 Punkt2::operator-(const Punkt2& p) const {
 	return Punkt2(x - p.getX(), y - p.getY());
 }
 
+//kopiuj¹cy operator przypisania
+Punkt2& Punkt2::operator=(const Punkt2& p) {
+	if (&p != this) {
+		x = p.x;
+		y = p.y;
+	}
+	return *this;
+}
+
+
 //iloczyn skalarny -> zwracaj¹cy double
 double Punkt2::operator*(const Punkt2& p) const {
 	return ((x * p.getX()) + (y * p.getY()));
 }
-
 
 void Punkt2::setX(double _x)
 {
@@ -76,6 +85,10 @@ double Punkt2::PoleTrojkota(Punkt2 p1, Punkt2 p2, Punkt2 p3) {
 	double p = (a + b + c) / 2;
 	return sqrt((p - a) * (p - b) * (p - c));
 }
+
+
+
+
 Punkt2::~Punkt2() {}
 
 

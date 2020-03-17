@@ -1,7 +1,7 @@
 /*
 Jakub Lemiesiewicz klasa 3D
 Plik polygon.h
-Data:
+Data: 15.03.2020
 */
 
 #ifndef POLYGON_H
@@ -18,7 +18,8 @@ public:
 
 	//konstruktory -> brak domyœlnego 
 	Polygon(int count, Punkt2* vertices);
-	//Polygon(Polygon& p);
+	Polygon(int quantity);
+	Polygon(const Polygon& p);
 	//! Metoda konstruuj¹ca tablicê wierzcho³ków.
 	/*!
 	  \param _vertices  argument typu Punkt*  przekazuj¹cy tablicê wierzcho³ków wielok¹ta
@@ -55,6 +56,9 @@ public:
 	double countTriangleArea(Punkt2 a, Punkt2 b, Punkt2 c);
 	//Funckja licz¹ca pole dowolnej figury wypuk³ej
 	double countTriangleArea();
+
+
+	Punkt2& operator[](int i);
 
 	~Polygon();
 

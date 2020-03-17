@@ -1,7 +1,7 @@
 /*
 Jakub Lemiesiewicz klasa 3D
 Plik main.cpp
-Data: 
+Data: 15.03.2020
 */
 //test z kompa
 //test z lapka
@@ -9,6 +9,8 @@ Data:
 #include "punkt2.h"
 #include "polygon.h"
 #include <iostream>
+#include <vector>
+#include <cstdio>
 
 using namespace std;
 int main() {
@@ -41,6 +43,30 @@ int main() {
 
 	Polygon pol1 = Polygon(4,vertices);
 
+	//testowanie operatora przypisania dla obiektów klasy Punkt2:
+	Punkt2 pierwszy{ 13.0, 30.0 };
+	Punkt2 drugi{ 1.0,3.0 };
+	pierwszy = drugi; //tu działa kopiujący operator przypisania
 
+	Punkt2 testowy_kop_oper_przyp = (pierwszy = drugi);
+
+	//test
+	Punkt2* coords = new Punkt2[4]{ Punkt2(0.0,0.0), Punkt2(1.0,0.0) ,Punkt2(1.0,1.0), Punkt2{0.0,1.0}};
+	Polygon kwadrat = Polygon(4,coords);
+	Punkt2 w1 = kwadrat[2];
+
+	cout << endl << "test" << endl;
+	cout << "w1.getX(): " <<w1.getX() <<endl;
+	cout << "w2.getY(): " << w1.getY() << endl;
+
+
+	//testowanie konstruntora z *quantity*
+	Polygon quan = Polygon(4);
+	cout << "quan" << endl;
+	for (int i = 0; i < 4; i++) {
+		cout << i << endl;
+		cout << quan[i].getX() << endl;
+		cout << quan[i].getY() << endl;
+	}
 	return 0;
 }

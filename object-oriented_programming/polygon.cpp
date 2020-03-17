@@ -1,13 +1,15 @@
 /*
 Jakub Lemiesiewicz klasa 3D
 Plik polygon.cpp
-Data:
+Data: 15.03.2020
 */
 
 #include "polygon.h"
 #include "punkt2.h"
 #include <iostream>
 #include <cmath>
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 
 
@@ -20,14 +22,24 @@ Polygon::Polygon(int _count, Punkt2* _vertices) {
 		vertices[i] = _vertices[i];
 	}
 }
-/*
-Polygon::Polygon(Polygon& p) {
+
+Polygon::Polygon(int quantity) {
+	vertices = new Punkt2[quantity];
+	count = quantity;
+	for (int i = 0; i < quantity; i++) {
+		vertices[i].setX(rand());
+		vertices[i].setY(rand());
+	}
+}
+
+
+Polygon::Polygon(const Polygon& p) {
 	count = p.count;
 	for (int i = 0; i < p.count; i++) {
 		vertices[i] = p.vertices[i];
 	}
 }
-*/
+
 void Polygon::setVertices(Punkt2* _vertices, int _count) {
 	vertices = _vertices;
 	count = _count;
@@ -62,6 +74,10 @@ double Polygon::countTriangleArea() {
 		result += countTriangleArea(vertices[0], vertices[i], vertices[i - 1]);
 	}
 	return result;
+}
+
+Punkt2& Polygon::operator[](int i) {
+	return vertices[i];
 }
 
 Polygon::~Polygon() {}

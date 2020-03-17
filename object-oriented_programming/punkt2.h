@@ -1,7 +1,7 @@
 /*
 Jakub Lemiesiewicz klasa 3D
 Plik punkt2.h
-Data:
+Data: 15.03.2020
 */
 
 #pragma once
@@ -26,7 +26,8 @@ public:
 	Punkt2 operator+(const Punkt2& p) const;
 	Punkt2 operator-(const Punkt2& p) const;
 	double operator*(const Punkt2& p) const;
-
+	Punkt2& operator=(const Punkt2 &p); //kopiuj¹cy operator przypisania
+	
 	//gettery
 	double getX() const;
 	double getY() const;
