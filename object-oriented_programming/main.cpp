@@ -40,7 +40,7 @@ int main() {
 	Punkt2 p2 = Punkt2(1.0,1.0);
 	Punkt2 p3 = Punkt2(3.0,-8.0);
 	Punkt2 p4 = Punkt2(-1.0,-1.0);
-	Punkt2* vertices = new Punkt2[4]{ p1,p2,p3,p4 };
+	Punkt2* vertices = new Punkt2[4]{ p1,p2,p3,Punkt2{12,2} };
 
 	Polygon pol1 = Polygon(4,vertices);
 
