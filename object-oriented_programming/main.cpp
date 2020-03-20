@@ -94,9 +94,12 @@ int main() {
 	/*Tworzenie obiektu korzystając z konstruktora*/
 	Polygon next_i_l = Polygon(Punkt2_list);
 	cout << endl<<"Wypisywanie polygona (test)"<<endl<<next_i_l<<endl;
-
-
 	cout << next_i_l[1];
 
+
+	//testowanie move
+	cout << endl << "Testowanie move" << endl;
+	Polygon movetest = move(next_i_l);
+	cout << movetest;
 	return 0;
 }
