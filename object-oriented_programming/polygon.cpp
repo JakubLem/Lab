@@ -105,6 +105,10 @@ Punkt2& Polygon::operator[](int i) {
 	return vertices[i];
 }
 
+Punkt2 Polygon::getVertex(int i) {
+	return vertices[i];
+}
+
 Polygon::~Polygon() {
 	if (vertices) {
 		delete[] vertices;

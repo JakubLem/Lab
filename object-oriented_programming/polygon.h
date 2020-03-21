@@ -41,6 +41,7 @@ public:
 	  \sa setVertices()
 	*/
 	void changeVertex(int i, double x, double y);
+	Punkt2 getVertex(int i);
 
 	//! Metoda ustawiaj¹ca iloœæ wierzcho³ków.
 	/*!
