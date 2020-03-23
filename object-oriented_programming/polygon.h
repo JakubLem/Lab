@@ -17,13 +17,11 @@ class Polygon
 public:
 	//zmienna statyczna zliczaj¹ca liczbê obiektów klasy Polygon
 	static unsigned int counter;
-
 	//konstruktory -> brak domyœlnego 
 	Polygon(int count, Punkt2* vertices);
 	Polygon(int quantity);
 	Polygon(const Polygon& p);
 	Polygon(initializer_list<Punkt2> list);
-
 	//! Metoda konstruuj¹ca tablicê wierzcho³ków.
 	/*!
 	  \param _vertices  argument typu Punkt*  przekazuj¹cy tablicê wierzcho³ków wielok¹ta
@@ -31,7 +29,6 @@ public:
 	  \sa changeVertex()
 	*/
 	void setVertices(Punkt2* _vertices, int _count);
-
 	/*DOXYGEN --> SPOSÓB DOKUMENTACJI WIDOCZNY PONI¯EJ*/
 	//! Metoda zmieniaj¹ca wspólrzêdne i-tego wierzcho³ka.
 	/*!
@@ -42,13 +39,11 @@ public:
 	*/
 	void changeVertex(int i, double x, double y);
 	Punkt2 getVertex(int i);
-
 	//! Metoda ustawiaj¹ca iloœæ wierzcho³ków.
 	/*!
 	  \param n argument typu int przekazuj¹cy iloœæ wiercho³ków
 	  \sa setVeritces()
 	*/
-
 	void setCount(int n);
 	double getPerimeter();/*!< Metoda obliczaj¹ca obwód wielok¹ta */
 
@@ -57,6 +52,14 @@ public:
 	double countTriangleArea(Punkt2 a, Punkt2 b, Punkt2 c);
 	//Funckja licz¹ca pole dowolnej figury wypuk³ej
 	double countTriangleArea();
+
+	/*-----------------------------OPERATORY-----------------------------*/
+
+	//przenosz¹cy  opertor przypisania
+	Polygon& operator=(const Polygon&& p);
+
+	//kopiuj¹cy operator przypisania
+	Polygon& operator=(const Polygon& p);
 
 	//operator cout
 	friend std::ostream& operator<<(std::ostream& os, const Polygon& obj);

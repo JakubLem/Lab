@@ -84,6 +84,10 @@ double Polygon::getPerimeter() {
 	return result;
 }
 
+Punkt2 Polygon::getVertex(int i) {
+	return vertices[i];
+}
+
 double Polygon::countTriangleArea(Punkt2 p1, Punkt2 p2, Punkt2 p3) {
 	double a = p1.getDistance(p2);
 	double b = p2.getDistance(p3);
@@ -101,13 +105,28 @@ double Polygon::countTriangleArea() {
 	return result;
 }
 
+/*-----------------------------OPERATORY-----------------------------*/
+
+//przenosz¹cy  opertor przypisania
+Polygon& Polygon::operator=(const Polygon&& p) {
+	count = p.count;
+	vertices = p.vertices;
+	return *this;
+}
+
+//kopiuj¹cy operator przypisania
+Polygon& Polygon::operator=(const Polygon& p) {
+	count = p.count;
+	vertices = p.vertices;
+	return *this;
+}
+
+
 Punkt2& Polygon::operator[](int i) {
 	return vertices[i];
 }
 
-Punkt2 Polygon::getVertex(int i) {
-	return vertices[i];
-}
+
 
 Polygon::~Polygon() {
 	if (vertices) {

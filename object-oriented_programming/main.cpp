@@ -101,5 +101,45 @@ int main() {
 	cout << endl << "Testowanie move" << endl;
 	Polygon movetest = move(next_i_l);
 	cout << movetest;
+
+
+	/*LAB 39*/
+	cout << endl << "LAB 39" << endl;
+	/*Implementacja zadanego kodu ze strony*/
+	Punkt2 lab39p1 = Punkt2(1.0, 2.0);
+	Punkt2 lab39p2 = lab39p1;
+	Punkt2 lab39p3 = lab39p1 + lab39p2;
+	Punkt2 lab39p4 = Punkt2(1000, 2000) + Punkt2(3000, 4000);
+	Punkt2 lab39p5 = Punkt2(10, 20);
+	Punkt2 lab39p6 = Punkt2(100, 200) + Punkt2(100, 200);
+
+	/*LAB 40*/
+	cout << endl << "LAB 40" << endl;
+	/*Implementacja zadanego kodu ze strony*/
+	Punkt2 lab40p1 = Punkt2(1.0, 2.0);// zwykły konstruktor
+	lab40p1 = Punkt2(100.0, 200.0);  //przenoszący operator przypisania 
+
+	/*testowanie operatorów dla Polygon*/
+	cout << endl << "testowanie operatorów dla Polygon" << endl;
+	Polygon lab40pol1 = movetest;
+	cout << lab40pol1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	return 0;
 }

@@ -6,24 +6,28 @@ Data: 15.03.2020
 #include "punkt2.h"
 #include <cmath>
 #include <math.h>
-
+#include <iostream>
 Punkt2::Punkt2() {
+	std::cout << endl << "Objekt zosta³ utworzony konstruktorem domyœlnym" << endl;
 	x = 0.0;
 	y = 0.0;
 }
 
 Punkt2::Punkt2(double coord) {
+	std::cout << endl << "Objekt zosta³ utworzony konstruktorem przyjmuj¹cym jeden argument" << endl;
 	x = coord;
 	y = coord;
 }
 
 //konstruktor tworz¹cy 
 Punkt2::Punkt2(double _x, double _y) {
+	std::cout << endl << "Objekt zosta³ utworzony konstruktorem tworz¹cym z dwóch argumentów" << endl;
 	x = _x;
 	y = _y;
 }
 
 Punkt2::Punkt2(const Punkt2& p) {
+	std::cout << endl << "Objekt zosta³ utworzony konstruktorem kopiuj¹cym" << endl;
 	x = p.x;
 	y = p.y;
 }
@@ -42,6 +46,13 @@ Punkt2& Punkt2::operator=(const Punkt2& p) {
 		x = p.x;
 		y = p.y;
 	}
+	return *this;
+}
+
+Punkt2& Punkt2::operator=(const Punkt2&& p) {
+	x = p.x;
+	y = p.y;
+	std::cout << "Uruchomi³ siê przenosz¹cy  opertor przypisania " << std::endl;
 	return *this;
 }
 

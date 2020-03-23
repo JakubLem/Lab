@@ -34,7 +34,8 @@ public:
 	Punkt2 operator-(const Punkt2& p) const;
 	double operator*(const Punkt2& p) const;
 	Punkt2& operator=(const Punkt2 &p); //kopiuj¹cy operator przypisania
-	
+	//przenosz¹cy  opertor przypisania
+	Punkt2& operator=(const Punkt2&& p);
 	//gettery
 	double getX() const;
 	double getY() const;
