@@ -124,10 +124,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="matrix.cpp" />
     <ClCompile Include="polygon.cpp" />
     <ClCompile Include="punkt2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="matrix.h" />
     <ClInclude Include="polygon.h" />
     <ClInclude Include="punkt2.h" />
   </ItemGroup>

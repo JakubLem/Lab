@@ -8,6 +8,7 @@ Data: 15.03.2020
 
 #include "punkt2.h"
 #include "polygon.h"
+#include "matrix.h"
 #include <iostream>
 #include <vector>
 #include <cstdio>
@@ -123,6 +124,20 @@ int main() {
 	cout << endl << "testowanie operatorów dla Polygon" << endl;
 	Polygon lab40pol1 = movetest;
 	cout << lab40pol1;
+
+
+	/*MATRIX*/
+	cout << endl << "MATRIX" << endl;
+	matrix o = matrix();
+	cout << endl << "main.cpp print całej tablicy" << endl;
+	o.printMATRIX();
+	double* row = o.getRow(2);
+	cout << endl << "row print" << endl;
+	cout << row[0];
+	cout << row[1];
+	cout << row[2];
+
+	
 
 
 
