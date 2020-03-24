@@ -27,7 +27,7 @@ matrix::matrix(double** _tab, int _sizeX, int _sizeY) {
 	}
 }
 
-matrix::matrix(matrix& m) {
+matrix::matrix(const matrix& m) {
 	sizeX = m.sizeX;
 	sizeY = m.sizeY;
 	tab = new double* [sizeY];

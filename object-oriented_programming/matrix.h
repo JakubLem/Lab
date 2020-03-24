@@ -10,7 +10,7 @@ public:
 	//konstruktory
 	matrix();
 	matrix(double** _tab, int _sizeX, int _sizeY);
-	matrix(matrix& m);
+	matrix(const matrix& m);
 	~matrix();
 
 	//wydobywanie wiersza
