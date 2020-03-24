@@ -19,22 +19,33 @@ matrix::matrix(double** _tab, int _sizeX, int _sizeY) {
 	sizeX = _sizeX;
 	sizeY = _sizeY;
 	tab = new double* [sizeY];
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < sizeY; i++) {
 		tab[i] = new double[sizeX];
-		for (int j = 0; j < 3; j++) {
+		for (int j = 0; j < sizeX; j++) {
 			tab[i][j] = _tab[i][j];
 		}
 	}
 }
-/*
+
 matrix::matrix(matrix& m) {
 	sizeX = m.sizeX;
 	sizeY = m.sizeY;
-}*/
+	tab = new double* [sizeY];
+	for (int i = 0; i < sizeY; i++) {
+		tab[i] = new double[sizeX];
+		for (int j = 0; j < sizeX; j++) {
+			tab[i][j] = m.tab[i][j];
+		}
+	}
+}
 
 
 matrix::~matrix()
 {
+	for (int i = 0; i < sizeY; i++) {
+		delete[]tab[i];
+	}
+	delete[] tab;
 }
 
 
