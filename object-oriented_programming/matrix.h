@@ -8,7 +8,7 @@ class matrix
 	int sizeY; // wymiar pionowy tablicy tab
 public:
 	//konstruktory
-	matrix();
+	matrix() = default; //konstruktor domyœlny
 	matrix(double** _tab, int _sizeX, int _sizeY);
 	matrix(const matrix& m);
 	~matrix();
@@ -28,5 +28,8 @@ public:
 	//printowanie kolumny (w argumencie)
 	void printCOLUMN(int column_index);
 
+	//operatory
+	double*& operator[](int x);
+	double& operator()(int x, int y);
 };
 

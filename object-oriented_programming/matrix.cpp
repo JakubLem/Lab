@@ -85,3 +85,11 @@ void matrix::printCOLUMN(int column_index) {
 		std::cout << tab[i][column_index] << " " ;
 	}
 }
+
+double*& matrix::operator[](int x) {
+	return tab[x];
+}
+
+double& matrix::operator()(int x, int y) {
+	return tab[x][y];
+}

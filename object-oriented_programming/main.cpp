@@ -76,7 +76,7 @@ int main() {
 	
 	//testowanie operatora cout
 	cout << endl << "//testowanie operatora cout" << endl;
-	cout << w1<<endl;
+	cout << w1 << endl;
 
 	//testowanie initializer_list
 	/*int*/
@@ -136,6 +136,12 @@ int main() {
 	cout << row[0];
 	cout << row[1];
 	cout << row[2];
+
+
+	/*f*/
+
+	//Punkt2 fpunkt1 = fpunkt1.f(lab39p1);
+
 
 	
 
