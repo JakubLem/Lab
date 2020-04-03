@@ -124,14 +124,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapPolygon.cpp" />
     <ClCompile Include="matrix.cpp" />
     <ClCompile Include="polygon.cpp" />
     <ClCompile Include="punkt2.cpp" />
+    <ClCompile Include="RGBA.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapPolygon.h" />
     <ClInclude Include="matrix.h" />
     <ClInclude Include="polygon.h" />
     <ClInclude Include="punkt2.h" />
+    <ClInclude Include="RGBA.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

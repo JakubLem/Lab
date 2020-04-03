@@ -2,8 +2,7 @@
 #include <iostream>
 
 
-matrix::matrix()
-{
+matrix::matrix() {
 	sizeX = 3;
 	sizeY = 3;
 	tab = new double * [sizeY];

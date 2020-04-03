@@ -108,24 +108,26 @@ double Polygon::countTriangleArea() {
 /*-----------------------------OPERATORY-----------------------------*/
 
 //przenosz¹cy  opertor przypisania
-Polygon& Polygon::operator=(const Polygon&& p) {
-
+Polygon& Polygon::operator=(Polygon&& p) {
 	if (&p != this) {
-		count = p.count;
-		vertices = new Punkt2[count];
+		delete[] vertices;
 		vertices = p.vertices;
+		count = p.count;
+		p.count = 0;
+		p.vertices = nullptr;
 	}
-	delete[] p.vertices;
-	delete& p.count;
 	return *this;
 }
 
 //kopiuj¹cy operator przypisania
-Polygon& Polygon::operator=(const Polygon& p) {
-	if (&p != this) {
-		count = p.count;
-		vertices = new Punkt2[count];
-		vertices = p.vertices;
+Polygon& Polygon::operator=(const Polygon& obj) {
+	if (&obj != this) {
+		delete[] vertices;
+		vertices = new Punkt2[obj.count];
+		count = obj.count;
+		for (int i = 0; i < count; i++) {
+			vertices[i] = obj.vertices[i];
+		}
 	}
 	return *this;
 }

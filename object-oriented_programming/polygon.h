@@ -18,6 +18,7 @@ public:
 	//zmienna statyczna zliczaj¹ca liczbê obiektów klasy Polygon
 	static unsigned int counter;
 	//konstruktory -> brak domyœlnego 
+	Polygon() {};
 	Polygon(int count, Punkt2* vertices);
 	Polygon(int quantity);
 	Polygon(const Polygon& p);
@@ -56,7 +57,7 @@ public:
 	/*-----------------------------OPERATORY-----------------------------*/
 
 	//przenosz¹cy  opertor przypisania
-	Polygon& operator=(const Polygon&& p);
+	Polygon& operator=(Polygon&& p);
 
 	//kopiuj¹cy operator przypisania
 	Polygon& operator=(const Polygon& p);

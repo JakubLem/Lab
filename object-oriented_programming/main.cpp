@@ -9,6 +9,9 @@ Data: 15.03.2020
 #include "punkt2.h"
 #include "polygon.h"
 #include "matrix.h"
+#include "MapPolygon.h"
+#include "RGBA.h"
+#include "Map.h"
 #include <iostream>
 #include <vector>
 #include <cstdio>
@@ -142,9 +145,15 @@ int main() {
 
 	//Punkt2 fpunkt1 = fpunkt1.f(lab39p1);
 
+	//lab 40-41
+
+	cout << endl << "LAB 40 - 41" << endl;
 
 	
+	MapPolygon mp1 = MapPolygon();
 
+	cout << endl << "mp1.getBorderColour('r');" << endl;
+	cout << mp1.getBorderColour('r');
 
 
 
