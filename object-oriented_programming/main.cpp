@@ -153,23 +153,7 @@ int main() {
 	MapPolygon mp1 = MapPolygon();
 
 	cout << endl << "mp1.getBorderColour('r');" << endl;
-	cout << mp1.getBorderColour('r');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	cout << mp1;
 
 	return 0;
 }
