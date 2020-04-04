@@ -32,14 +32,10 @@ MapPolygon::MapPolygon(const MapPolygon& mp) {
 }
 //konstruktor przenosz¹cy
 MapPolygon::MapPolygon(MapPolygon&& mp) {
-	borderWidth = mp.borderWidth;
-	borderColor = mp.borderColor;
-	fillColor = mp.fillColor;
-	opacity = mp.opacity;
-	delete& mp.borderWidth;
-	delete& mp.borderColor;
-	delete& mp.fillColor;
-	delete& mp.opacity;
+	borderWidth = move(mp.borderWidth);
+	borderColor = move(mp.borderColor);
+	fillColor = move(mp.fillColor);
+	opacity = move(mp.opacity);
 }
 
 
