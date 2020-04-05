@@ -7,7 +7,7 @@
 #include<ostream>
 using namespace std;
 
-class MapPolygon : Polygon
+class MapPolygon : public Polygon
 {
 	int borderWidth;
 	RGBA borderColor;

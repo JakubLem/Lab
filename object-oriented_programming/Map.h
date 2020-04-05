@@ -1,7 +1,9 @@
 #pragma once
+
 #include "polygon.h"
 #include "PolyLine.h"
 #include "MapPoint.h"
+#include <initializer_list>
 class Map
 {
 	Polygon* polygons;
@@ -16,7 +18,7 @@ public:
 	//domyœlny
 	Map();
 	//w pe³ni sparametryzowany
-	Map(Polygon * _polygons , int _pol_count , PolyLine * _polyLines, int _lines_count);
+	Map(Polygon * _polygons , int _pol_count , PolyLine * _polyLines, int _lines_count, MapPoint* _points, int _point_count);
 	
 	//konstruktor z initializer_list
 	Map(initializer_list<Polygon> polygon_list, initializer_list<PolyLine> polyline_list, initializer_list<MapPoint> mappoint_list);

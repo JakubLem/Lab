@@ -1,12 +1,22 @@
 #include "Map.h"
+#include "polygon.h"
+#include "PolyLine.h"
+#include "MapPoint.h"
+#include <initializer_list>
 
-
+using namespace std;
 
 Map::Map()
 {
+	polygons = new Polygon[3];
+	pol_count = 3;
+	polyLines = new PolyLine[2];
+	lines_count = 2;
+	points = new MapPoint[1];
+	point_count = 1;
 }
 
-Map::Map(Polygon* _polygons, int _pol_count, PolyLine* _polyLines, int _lines_count) {
+Map::Map(Polygon* _polygons, int _pol_count, PolyLine* _polyLines, int _lines_count, MapPoint* _points, int _point_count) {
 	pol_count = _pol_count;
 	polygons = new Polygon[pol_count];
 	for (int i = 0; i < _pol_count; i++) {
@@ -18,6 +28,13 @@ Map::Map(Polygon* _polygons, int _pol_count, PolyLine* _polyLines, int _lines_co
 	for (int i = 0; i < lines_count; i++) {
 		polyLines[i] = _polyLines[i];
 	}
+
+	point_count = _point_count;
+	points = new MapPoint[point_count];
+	for (int i = 0; i < point_count; i++) {
+		points[i] = _points[i];
+	}
+
 }
 
 Map::Map(initializer_list<Polygon> polygon_list, initializer_list<PolyLine> polyline_list, initializer_list<MapPoint> mappoint_list) {

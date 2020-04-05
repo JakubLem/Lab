@@ -8,7 +8,7 @@ using namespace std;
 
 /*KONSTRUKTORY*/
 //konstrkuktor domyœlny
-MapPolygon::MapPolygon() {
+MapPolygon::MapPolygon() : Polygon() {
 	borderWidth = 1;
 	borderColor = RGBA(8,8,8,255);
 	fillColor = RGBA();
@@ -16,7 +16,7 @@ MapPolygon::MapPolygon() {
 }
 
 //konstruktor w pe³ni sparametryzowany
-MapPolygon::MapPolygon(int _borderWidth, RGBA _borderColor, RGBA _fillColor, int _opacity) {
+MapPolygon::MapPolygon(int _borderWidth, RGBA _borderColor, RGBA _fillColor, int _opacity) : Polygon() {
 	borderWidth = _borderWidth;
 	borderColor = _borderColor;
 	fillColor = _fillColor;
@@ -26,8 +26,8 @@ MapPolygon::MapPolygon(int _borderWidth, RGBA _borderColor, RGBA _fillColor, int
 //konstruktor kopiuj¹cy
 MapPolygon::MapPolygon(const MapPolygon& mp) {
 	borderWidth = mp.borderWidth;
-	borderColor = mp.borderColor;
-	fillColor = mp.fillColor;
+	borderColor = RGBA(mp.borderColor);
+	fillColor = RGBA(mp.fillColor);
 	opacity = mp.opacity;
 }
 //konstruktor przenosz¹cy

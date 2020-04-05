@@ -155,5 +155,10 @@ int main() {
 	cout << endl << "mp1.getBorderColour('r');" << endl;
 	cout << mp1;
 
+	/*Testowanie dziedziczenia MapPolygon*/
+	cout << endl << "Testowanie dziedziczenia MapPolygon" << endl;
+	MapPolygon mp2 = MapPolygon();
+	cout << mp2.getVertex(2);
+
 	return 0;
 }

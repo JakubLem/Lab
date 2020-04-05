@@ -1,6 +1,7 @@
 #include "RGBA.h"
 #include<ostream>
 #include<iostream>
+#include<initializer_list>
 
 using namespace std;
 
@@ -17,6 +18,26 @@ RGBA::RGBA(int _r, int _g, int _b, int _a) {
 	g = _g;
 	b = _b;
 	a = _a;
+}
+
+RGBA::RGBA(initializer_list<int> rgba_list) {
+	if (rgba_list.size() == 4) {
+		int i = 0;
+		int tab[4];
+		for (auto obj : rgba_list) {
+			tab[i] = obj;
+			i++;
+		}
+		r = tab[0];
+		g = tab[1];
+		b = tab[2];
+		a = tab[3];
+	} else {
+		r = 255;
+		g = 255;
+		b = 255;
+		a = 255;
+	}
 }
 
 /*SETTERY*/

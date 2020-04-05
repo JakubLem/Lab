@@ -18,7 +18,7 @@ public:
 	//zmienna statyczna zliczaj¹ca liczbê obiektów klasy Polygon
 	static unsigned int counter;
 	//konstruktory -> brak domyœlnego 
-	Polygon() {};
+	Polygon();
 	Polygon(int count, Punkt2* vertices);
 	Polygon(int quantity);
 	Polygon(const Polygon& p);

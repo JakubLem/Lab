@@ -11,14 +11,18 @@ class MapPoint : Punkt2 // po dwukropku podajemy klasê, któr¹ dziedziczy klasa M
 
 public:
 
+	/*Konstruktory*/
+	//konstruktor domyœlny
 	MapPoint();
-
+	//w pe³ni sparametryzowany
 	MapPoint(double x, double y, int radius, RGBA color);
 
+	/*SETTERY*/
 	void setVisRadius(int r);
 	void setVisColor(RGBA color);
 
+	/*GETTERY*/
 	int getVisRadius();
 	RGBA getVisColor();
-
-}
+	~MapPoint();
+};

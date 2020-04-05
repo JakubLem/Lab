@@ -15,7 +15,13 @@ Data: 15.03.2020
 using namespace std;
 
 
-
+Polygon::Polygon() {
+	count = 3;
+	vertices = new Punkt2[count];
+	vertices[0] = Punkt2(1.0 , 0.0);
+	vertices[1] = Punkt2(2.0 , 0.0);
+	vertices[2] = Punkt2(2.0 , 1.0);
+}
 
 Polygon::Polygon(int _count, Punkt2* _vertices) {
 	count = _count;

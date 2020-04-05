@@ -2,6 +2,7 @@
 
 #include<ostream>
 #include<iostream>
+#include<initializer_list>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ public:
 	//konstruktory
 	RGBA(); //konstruktor domyœlny
 	RGBA(int _r, int _g, int _b, int _a);
-
+	RGBA(initializer_list<int> list);
 	/*SETTERY*/
 	void setR(int _r);
 	void setG(int _g);
