@@ -24,5 +24,11 @@ public:
 	/*GETTERY*/
 	int getVisRadius();
 	RGBA getVisColor();
+
+	/*FUNKCJE*/
+	///zwracaj¹ca wartoœæ promienia
+	double getAngle();
+
+
 	~MapPoint();
 };
