@@ -23,6 +23,7 @@ public:
 	Polygon(int quantity);
 	Polygon(const Polygon& p);
 	Polygon(initializer_list<Punkt2> list);
+	Polygon(vector<vector<double>> list);
 	//! Metoda konstruuj¹ca tablicê wierzcho³ków.
 	/*!
 	  \param _vertices  argument typu Punkt*  przekazuj¹cy tablicê wierzcho³ków wielok¹ta
@@ -46,6 +47,7 @@ public:
 	  \sa setVeritces()
 	*/
 	void setCount(int n);
+	double getCount();
 	double getPerimeter();/*!< Metoda obliczaj¹ca obwód wielok¹ta */
 
 	/*Obliczanie pola figury*/

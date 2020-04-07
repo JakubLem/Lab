@@ -24,6 +24,13 @@ void MapPoint::setVisColor(RGBA color) {
 	visColor = color;
 }
 
+void MapPoint::setX(double _x) {
+	this->setX(_x);
+}
+void MapPoint::setY(double _y) {
+	this->setY(_y);
+}
+
 /*GETTERY*/
 int MapPoint::getVisRadius() {
 	return visRadius;
@@ -31,6 +38,13 @@ int MapPoint::getVisRadius() {
 
 RGBA MapPoint::getVisColor() {
 	return visColor;
+}
+
+double MapPoint::getX() {
+	return this->getX();
+}
+double MapPoint::getY() {
+	return this->getY();
 }
 
 /*FUNKCJE*/

@@ -61,6 +61,24 @@ Polygon::Polygon(initializer_list<Punkt2> list) {
 	}
 }
 
+Polygon::Polygon(vector<vector<double>> list) {
+	count = list.size();
+	vertices = new Punkt2[count];
+	int i = 0; 
+	int j;
+	double* tab = new double[2];
+	for (auto obj : list) {
+		j = 0;
+		for (auto coord : obj) {
+			tab[j] = coord;
+			j++;
+		}
+		vertices[i].setX(tab[0]);
+		vertices[i].setY(tab[1]);
+		i++;
+	}
+}
+
 /*Operator cout<<*/
 ostream& operator<<(ostream& os, const Polygon& obj) {
 	os << endl;
@@ -140,9 +158,22 @@ Polygon& Polygon::operator=(const Polygon& obj) {
 
 
 Punkt2& Polygon::operator[](int i) {
-	return vertices[i];
+	if (i <= count) {
+		return vertices[i];
+	}
+	else {
+		return vertices[0];
+	}
+
 }
 
+
+void Polygon::setCount(int n) {
+	count = n;
+}
+double Polygon::getCount() {
+	return count;
+}
 
 
 Polygon::~Polygon() {

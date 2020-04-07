@@ -160,5 +160,13 @@ int main() {
 	MapPolygon mp2 = MapPolygon();
 	cout << mp2.getVertex(2);
 
+	/*Konstruktor konwertujący vector - lab 41/42*/
+	vector<vector<double>> lab43lista1 = { {12.0,2.0},{3.0,4.0} };
+	Polygon lab43 = Polygon(lab43lista1);
+	cout << endl << "/*Konstruktor konwertujący vector - lab 41/42*/" << endl;
+	cout << "lab43.getCount();: " << lab43.getCount() << endl;
+	cout << "lab43.getVertex(1)" << lab43.getVertex(0) << endl;
+
+
 	return 0;
 }

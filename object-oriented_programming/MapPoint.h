@@ -20,10 +20,13 @@ public:
 	/*SETTERY*/
 	void setVisRadius(int r);
 	void setVisColor(RGBA color);
-
+	void setX(double _x);
+	void setY(double _y);
 	/*GETTERY*/
 	int getVisRadius();
 	RGBA getVisColor();
+	double getX();
+	double getY();
 
 	/*FUNKCJE*/
 	///zwracaj¹ca wartoœæ promienia
