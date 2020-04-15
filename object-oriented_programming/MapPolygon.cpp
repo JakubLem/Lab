@@ -16,7 +16,7 @@ MapPolygon::MapPolygon() : Polygon() {
 }
 
 //konstruktor w pe³ni sparametryzowany
-MapPolygon::MapPolygon(int _borderWidth, RGBA _borderColor, RGBA _fillColor, int _opacity) : Polygon() {
+MapPolygon::MapPolygon(Punkt2 * _vertices, int _count, int _borderWidth, RGBA _borderColor, RGBA _fillColor, int _opacity) : Polygon(_count, _vertices) {
 	borderWidth = _borderWidth;
 	borderColor = _borderColor;
 	fillColor = _fillColor;
@@ -24,14 +24,14 @@ MapPolygon::MapPolygon(int _borderWidth, RGBA _borderColor, RGBA _fillColor, int
 }
 
 //konstruktor kopiuj¹cy
-MapPolygon::MapPolygon(const MapPolygon& mp) {
+MapPolygon::MapPolygon(const MapPolygon& mp) : Polygon(mp){
 	borderWidth = mp.borderWidth;
 	borderColor = RGBA(mp.borderColor);
 	fillColor = RGBA(mp.fillColor);
 	opacity = mp.opacity;
 }
 //konstruktor przenosz¹cy
-MapPolygon::MapPolygon(MapPolygon&& mp) {
+MapPolygon::MapPolygon(MapPolygon&& mp) : Polygon(mp){
 	borderWidth = move(mp.borderWidth);
 	borderColor = move(mp.borderColor);
 	fillColor = move(mp.fillColor);

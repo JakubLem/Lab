@@ -112,6 +112,10 @@ Punkt2 Polygon::getVertex(int i) {
 	return vertices[i];
 }
 
+Punkt2* Polygon::getVertices() {
+	return vertices;
+}
+
 double Polygon::countTriangleArea(Punkt2 p1, Punkt2 p2, Punkt2 p3) {
 	double a = p1.getDistance(p2);
 	double b = p2.getDistance(p3);
@@ -160,11 +164,9 @@ Polygon& Polygon::operator=(const Polygon& obj) {
 Punkt2& Polygon::operator[](int i) {
 	if (i <= count) {
 		return vertices[i];
-	}
-	else {
+	} else {
 		return vertices[0];
 	}
-
 }
 
 

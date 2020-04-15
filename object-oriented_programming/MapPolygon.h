@@ -19,7 +19,7 @@ public:
 	//konstruktor domyœlny
 	MapPolygon();
 	//konstruktor w pe³ni sparametryzowany
-	MapPolygon(int _borderWidth, RGBA _borderColor, RGBA _fillColor, int opacity);
+	MapPolygon(Punkt2* _vertices, int _count, int _borderWidth, RGBA _borderColor, RGBA _fillColor, int opacity);
 	//konstruktor kopiuj¹cy
 	MapPolygon(const MapPolygon& mp);
 	//konstruktor przenosz¹cy

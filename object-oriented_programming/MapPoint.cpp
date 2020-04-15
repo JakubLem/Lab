@@ -5,7 +5,7 @@
 /*KONSTRUKTORY*/
 
 MapPoint::MapPoint(double x, double y, int radius, RGBA color) : Punkt2(x, y) {
-	visRadius =  radius ;
+	visRadius =  radius;
 	visColor = color;
 }
 

@@ -41,6 +41,7 @@ public:
 	*/
 	void changeVertex(int i, double x, double y);
 	Punkt2 getVertex(int i);
+	Punkt2* getVertices();
 	//! Metoda ustawiaj¹ca iloœæ wierzcho³ków.
 	/*!
 	  \param n argument typu int przekazuj¹cy iloœæ wiercho³ków
