@@ -31,7 +31,7 @@ MapPolygon::MapPolygon(const MapPolygon& mp) : Polygon(mp){
 	opacity = mp.opacity;
 }
 //konstruktor przenosz¹cy
-MapPolygon::MapPolygon(MapPolygon&& mp) : Polygon(mp){
+MapPolygon::MapPolygon(MapPolygon&& mp) : Polygon(move(mp)){
 	borderWidth = move(mp.borderWidth);
 	borderColor = move(mp.borderColor);
 	fillColor = move(mp.fillColor);
