@@ -75,6 +75,7 @@ int main() {
 		cout << i << endl;
 		cout << quan[i].getX() << endl;
 		cout << quan[i].getY() << endl;
+		float x = float(10.2);
 	}
 	
 	//testowanie operatora cout

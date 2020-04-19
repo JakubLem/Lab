@@ -113,7 +113,7 @@ Punkt2 Polygon::getVertex(int i) {
 }
 
 Punkt2* Polygon::getVertices() {
-	return vertices;
+	return dynamic_cast<Punkt2*>(vertices);
 }
 
 double Polygon::countTriangleArea(Punkt2 p1, Punkt2 p2, Punkt2 p3) {

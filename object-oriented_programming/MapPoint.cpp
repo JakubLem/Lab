@@ -49,7 +49,7 @@ double MapPoint::getY() {
 
 /*FUNKCJE*/
 double MapPoint::getAngle() {
-	return this->getAngle();
+	return static_cast<double>(this->getAngle());
 }
 
 

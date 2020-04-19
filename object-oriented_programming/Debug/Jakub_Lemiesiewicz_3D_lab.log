@@ -1,2 +1,27 @@
-﻿  main.cpp
-  Jakub_Lemiesiewicz_3D_lab.vcxproj -> C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\Debug\Jakub_Lemiesiewicz_3D_lab.exe
+﻿  Map.cpp
+  MapPoint.cpp
+  MapPolygon.cpp
+  main.cpp
+  polygon.cpp
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\polygon.cpp(85): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\polygon.cpp(104): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\polygon.cpp(130): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\polygon.cpp(156): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\polygon.cpp(165): warning C4018: "<=": niezgodność typu ze znakiem/bez znaku
+  Generowanie kodu...
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\MapPoint.cpp(45): warning C4717: "MapPoint::getX": cykliczne we wszystkich ścieżkach przepływu, funkcja spowoduje przepełnienie stosu w trakcie wykonywania
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\MapPoint.cpp(32): warning C4717: "MapPoint::setY": cykliczne we wszystkich ścieżkach przepływu, funkcja spowoduje przepełnienie stosu w trakcie wykonywania
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\MapPoint.cpp(29): warning C4717: "MapPoint::setX": cykliczne we wszystkich ścieżkach przepływu, funkcja spowoduje przepełnienie stosu w trakcie wykonywania
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\MapPoint.cpp(48): warning C4717: "MapPoint::getY": cykliczne we wszystkich ścieżkach przepływu, funkcja spowoduje przepełnienie stosu w trakcie wykonywania
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\MapPoint.cpp(53): warning C4717: "MapPoint::getAngle": cykliczne we wszystkich ścieżkach przepływu, funkcja spowoduje przepełnienie stosu w trakcie wykonywania
+main.obj : error LNK2019: nierozpoznany zewnŕtrzny symbol "public: __thiscall Polygon::Polygon(int,class Punkt2 *)" (??0Polygon@@QAE@HPAVPunkt2@@@Z) przywo│any w funkcji _main
+MapPolygon.obj : error LNK2001: nierozpoznany symbol zewnŕtrzny "public: __thiscall Polygon::Polygon(int,class Punkt2 *)" (??0Polygon@@QAE@HPAVPunkt2@@@Z)
+main.obj : error LNK2019: nierozpoznany zewnŕtrzny symbol "public: __thiscall Polygon::Polygon(int)" (??0Polygon@@QAE@H@Z) przywo│any w funkcji _main
+main.obj : error LNK2019: nierozpoznany zewnŕtrzny symbol "public: __thiscall Polygon::Polygon(class Polygon const &)" (??0Polygon@@QAE@ABV0@@Z) przywo│any w funkcji _main
+Map.obj : error LNK2001: nierozpoznany symbol zewnŕtrzny "public: __thiscall Polygon::Polygon(class Polygon const &)" (??0Polygon@@QAE@ABV0@@Z)
+MapPolygon.obj : error LNK2001: nierozpoznany symbol zewnŕtrzny "public: __thiscall Polygon::Polygon(class Polygon const &)" (??0Polygon@@QAE@ABV0@@Z)
+main.obj : error LNK2019: nierozpoznany zewnŕtrzny symbol "public: __thiscall Polygon::Polygon(class std::initializer_list<class Punkt2>)" (??0Polygon@@QAE@V?$initializer_list@VPunkt2@@@std@@@Z) przywo│any w funkcji _main
+main.obj : error LNK2019: nierozpoznany zewnŕtrzny symbol "public: __thiscall Polygon::Polygon(class std::vector<class std::vector<double,class std::allocator<double> >,class std::allocator<class std::vector<double,class std::allocator<double> > > >)" (??0Polygon@@QAE@V?$vector@V?$vector@NV?$allocator@N@std@@@std@@V?$allocator@V?$vector@NV?$allocator@N@std@@@std@@@2@@std@@@Z) przywo│any w funkcji _main
+Map.obj : error LNK2019: nierozpoznany zewnŕtrzny symbol "public: __thiscall Polygon::Polygon(void)" (??0Polygon@@QAE@XZ) przywo│any w funkcji "public: __thiscall Map::Map(class Map const &)" (??0Map@@QAE@ABV0@@Z)
+MapPolygon.obj : error LNK2001: nierozpoznany symbol zewnŕtrzny "public: __thiscall Polygon::Polygon(void)" (??0Polygon@@QAE@XZ)
+C:\Users\jakub\source\repos\Jakub_Lemiesiewicz_3D_lab\Lab\object-oriented_programming\Debug\Jakub_Lemiesiewicz_3D_lab.exe : fatal error LNK1120: liczba nierozpoznanych elementˇw zewnŕtrznych: 6
