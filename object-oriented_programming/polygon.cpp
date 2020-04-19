@@ -70,7 +70,7 @@ Polygon::Polygon(vector<vector<double>> list) {
 	for (auto obj : list) {
 		j = 0;
 		for (auto coord : obj) {
-			tab[j] = coord;
+			tab[j] = (double)coord;
 			j++;
 		}
 		vertices[i].setX(tab[0]);

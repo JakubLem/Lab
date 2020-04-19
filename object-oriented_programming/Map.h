@@ -38,8 +38,7 @@ public:
 	PolyLine getPolyLine(int i);
 	int getLinesCount();
 
-
-
+	Map& operator=(const Map& m);
 	~Map();
 };
 

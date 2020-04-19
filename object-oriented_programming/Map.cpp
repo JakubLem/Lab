@@ -107,6 +107,31 @@ int Map::getLinesCount() {
 	return lines_count;
 }
 
+Map& Map::operator=(const Map& obj) {
+	if (&obj != this) {
+		delete[] polygons;
+		polygons = new Polygon[obj.pol_count];
+		pol_count = obj.pol_count;
+		for (int i = 0; i < pol_count; i++) {
+			polygons[i] = obj.polygons[i];
+		}
+
+		delete[] polyLines;
+		polyLines = new PolyLine[obj.lines_count];
+		lines_count = obj.lines_count;
+		for (int i = 0; i < lines_count; i++) {
+			polyLines[i] = obj.polyLines[i];
+		}
+
+		delete[] points;
+		points = new MapPoint[obj.point_count];
+		point_count = obj.point_count;
+		for (int i = 0; i < point_count; i++) {
+			points[i] = obj.points[i];
+		}
+	}
+	return *this;
+}
 
 
 Map::~Map()

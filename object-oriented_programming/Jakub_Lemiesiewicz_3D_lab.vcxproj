@@ -128,6 +128,7 @@
     <ClCompile Include="MapPoint.cpp" />
     <ClCompile Include="MapPolygon.cpp" />
     <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="NextMap.cpp" />
     <ClCompile Include="polygon.cpp" />
     <ClCompile Include="PolyLine.cpp" />
     <ClCompile Include="punkt2.cpp" />
@@ -138,6 +139,7 @@
     <ClInclude Include="MapPoint.h" />
     <ClInclude Include="MapPolygon.h" />
     <ClInclude Include="matrix.h" />
+    <ClInclude Include="NextMap.h" />
     <ClInclude Include="polygon.h" />
     <ClInclude Include="PolyLine.h" />
     <ClInclude Include="punkt2.h" />
