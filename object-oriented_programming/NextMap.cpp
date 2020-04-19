@@ -14,6 +14,7 @@ NextMap::NextMap()
 	maps = new Map[1];
 	maps[0] = Map();
 }
+
 //w pe³ni sparametryzowany
 NextMap::NextMap(Map* _maps, int _quantity, int _r, int _g, int _b, int _a, double _x, double _y) 
 	: RGBA(_r, _g, _b, _a) , Punkt2(_x, _y) {
@@ -23,6 +24,7 @@ NextMap::NextMap(Map* _maps, int _quantity, int _r, int _g, int _b, int _a, doub
 		maps[i] = _maps[i];
 	}
 }
+
 //w pe³ni sparametryzowany (class-version)
 NextMap::NextMap(Map* _maps, int _quantity, RGBA rgbaOBJ, Punkt2 Punkt2OBJ) 
 	: RGBA(rgbaOBJ) , Punkt2(Punkt2OBJ) {
@@ -33,6 +35,7 @@ NextMap::NextMap(Map* _maps, int _quantity, RGBA rgbaOBJ, Punkt2 Punkt2OBJ)
 	}
 
 }
+
 //z argumentem initializer list
 NextMap::NextMap(initializer_list<Map>_maps, RGBA rgbaOBJ, Punkt2 Punkt2OBJ) 
 	: RGBA(rgbaOBJ), Punkt2(Punkt2OBJ) {
