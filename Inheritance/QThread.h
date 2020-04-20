@@ -1,5 +1,6 @@
 #pragma once
-class QThread
+#include "QObject.h"
+class QThread : QObject
 {
 public:
 	QThread();

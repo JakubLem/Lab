@@ -1,5 +1,7 @@
 #pragma once
-class QAbstractScrollArea
+#include "QFrame.h"
+
+class QAbstractScrollArea : QFrame
 {
 public:
 	QAbstractScrollArea();

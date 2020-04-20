@@ -1,5 +1,7 @@
 #pragma once
-class QCheckBox
+#include "QAbstractButton.h"
+
+class QCheckBox : QAbstractButton
 {
 public:
 	QCheckBox();

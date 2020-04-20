@@ -13,7 +13,7 @@
 #include "QGraphicsView.h"
 #include "QTextEdit.h"
 
-#include ""
+#include "functions.h"
 
 #include<iostream>
 

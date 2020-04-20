@@ -1,5 +1,7 @@
 #pragma once
-class QProgressBar
+#include "QWidget.h"
+
+class QProgressBar : QWidget
 {
 public:
 	QProgressBar();

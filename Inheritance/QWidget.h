@@ -1,5 +1,6 @@
 #pragma once
-class QWidget
+#include "QObject.h"
+class QWidget : public QObject
 {
 public:
 	QWidget();

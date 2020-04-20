@@ -1,5 +1,7 @@
 #pragma once
-class QAbstractButton
+#include "QWidget.h"
+
+class QAbstractButton : QWidget
 {
 public:
 	QAbstractButton();

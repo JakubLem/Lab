@@ -1,5 +1,7 @@
 #pragma once
-class QRadioButton
+#include "QAbstractButton.h"
+
+class QRadioButton : QAbstractButton
 {
 public:
 	QRadioButton();

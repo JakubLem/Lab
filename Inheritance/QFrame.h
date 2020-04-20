@@ -1,5 +1,7 @@
 #pragma once
-class QFrame
+#include "QWidget.h"
+
+class QFrame : QWidget
 {
 public:
 	QFrame();

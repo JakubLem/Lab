@@ -1,5 +1,7 @@
 #pragma once
-class QLabel
+#include "QFrame.h"
+
+class QLabel : QFrame
 {
 public:
 	QLabel();
