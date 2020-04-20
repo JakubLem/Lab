@@ -8,10 +8,16 @@ using namespace std;
 
 /*KONSTRUKTORY*/
 
-	//konstruktor domyœlny
+//konstruktor domyœlny
 QWidget::QWidget() 
 	: QObject() {
-
+	visibility = true;
+	priority = 1;
+	position = Position();
+	width = 100.0;
+	height = 100.0;
+	border = Border();
+	opacity = 1;
 }
 //konstruktor w pe³ni sparametryzowany
 QWidget::QWidget(bool _visibility, int _priority, Position _position, double _width, double _height, Border _border, double _opacity, string _name) 
