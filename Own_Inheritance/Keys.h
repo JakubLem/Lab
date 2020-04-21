@@ -1,6 +1,9 @@
 #pragma once
-class Keys
+#include "Instrument.h"
+
+class Keys : Instrument
 {
+	int quantityKeys;
 public:
 	Keys();
 	~Keys();

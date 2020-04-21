@@ -1,5 +1,6 @@
 #pragma once
-class Keyboard
+#include "ElectronicKeys.h"
+class Keyboard : 
 {
 public:
 	Keyboard();

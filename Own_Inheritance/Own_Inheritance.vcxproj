@@ -135,6 +135,7 @@
     <ClCompile Include="Keys.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MIDIKeyboard.cpp" />
+    <ClCompile Include="Pad.cpp" />
     <ClCompile Include="Piano.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +150,7 @@
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Keys.h" />
     <ClInclude Include="MIDIKeyboard.h" />
+    <ClInclude Include="Pad.h" />
     <ClInclude Include="Piano.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
