@@ -123,8 +123,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Border.cpp" />
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Position.cpp" />
     <ClCompile Include="QAbstractButton.cpp" />
     <ClCompile Include="QAbstractScrollArea.cpp" />
     <ClCompile Include="QCheckBox.cpp" />
@@ -138,9 +140,12 @@
     <ClCompile Include="QTextEdit.cpp" />
     <ClCompile Include="QThread.cpp" />
     <ClCompile Include="QWidget.cpp" />
+    <ClCompile Include="RGB.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Border.h" />
     <ClInclude Include="functions.h" />
+    <ClInclude Include="Position.h" />
     <ClInclude Include="QAbstractButton.h" />
     <ClInclude Include="QAbstractScrollArea.h" />
     <ClInclude Include="QCheckBox.h" />
@@ -154,6 +159,7 @@
     <ClInclude Include="QTextEdit.h" />
     <ClInclude Include="QThread.h" />
     <ClInclude Include="QWidget.h" />
+    <ClInclude Include="RGB.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
