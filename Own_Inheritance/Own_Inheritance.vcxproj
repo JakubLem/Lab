@@ -123,6 +123,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AcousticGuitar.cpp" />
+    <ClCompile Include="ClassicGuitar.cpp" />
+    <ClCompile Include="ElectricGuitar.cpp" />
+    <ClCompile Include="ElectricPiano.cpp" />
+    <ClCompile Include="ElectronicKeys.cpp" />
+    <ClCompile Include="GrandPiano.cpp" />
+    <ClCompile Include="Guitar.cpp" />
+    <ClCompile Include="Instrument.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="Keys.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MIDIKeyboard.cpp" />
+    <ClCompile Include="Piano.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AcousticGuitar.h" />
+    <ClInclude Include="ClassicGuitar.h" />
+    <ClInclude Include="ElectricGuitar.h" />
+    <ClInclude Include="ElectricPiano.h" />
+    <ClInclude Include="ElectronicKeys.h" />
+    <ClInclude Include="GrandPiano.h" />
+    <ClInclude Include="Guitar.h" />
+    <ClInclude Include="Instrument.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="Keys.h" />
+    <ClInclude Include="MIDIKeyboard.h" />
+    <ClInclude Include="Piano.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
