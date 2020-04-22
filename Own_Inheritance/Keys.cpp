@@ -1,5 +1,7 @@
 #include "Keys.h"
-
+#include "Instrument.h"
+#include <string>
+using namespace std;
 
 
 /*KONSTRUKTORY*/
@@ -32,30 +34,30 @@ Keys::Keys(const Keys &k)
 	
 /*SETTERY*/
 void Keys::setQuantityKeys(int _quantityKeys){
-
+    quantityKeys = _quantityKeys;
 }
 void Keys::setMaxVolume(double _maxVolume){
-
+    maxVolume = _maxVolume;
 }
 void Keys::setPedalsCount(int _pedalsCount){
-
+    pedalsCount = _pedalsCount;
 }
 void Keys::setKeyMaterial(string _keyMaterial){
-
+    keyMaterial = _keyMaterial;
 }
 
 /*GETTERY*/
 int Keys::getQuantityKeys(){
-
+    return quantityKeys;
 }
 double Keys::getMaxVolume(){
-
+    return maxVolume;
 }
 int Keys::getPedalsCount(){
-
+    return pedalsCount;
 }
 string Keys::getKeyMaterial(){
-
+    return keyMaterial;
 }
 
 
