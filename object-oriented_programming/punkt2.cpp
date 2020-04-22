@@ -8,28 +8,36 @@ Data: 15.03.2020
 #include <math.h>
 #include <iostream>
 Punkt2::Punkt2() {
-	std::cout << endl << "Objekt zosta³ utworzony konstruktorem domyœlnym" << endl;
+	std::cout << endl << "Objekt zostaï¿½ utworzony konstruktorem domyï¿½lnym" << endl;
 	x = 0.0;
 	y = 0.0;
 }
 
 Punkt2::Punkt2(double coord) {
-	std::cout << endl << "Objekt zosta³ utworzony konstruktorem przyjmuj¹cym jeden argument" << endl;
+	std::cout << endl << "Objekt zostaï¿½ utworzony konstruktorem przyjmujï¿½cym jeden argument" << endl;
 	x = coord;
 	y = coord;
 }
 
-//konstruktor tworz¹cy 
+//konstruktor tworzï¿½cy 
 Punkt2::Punkt2(double _x, double _y) {
-	std::cout << endl << "Objekt zosta³ utworzony konstruktorem tworz¹cym z dwóch argumentów" << endl;
+	std::cout << endl << "Objekt zostaï¿½ utworzony konstruktorem tworzï¿½cym z dwï¿½ch argumentï¿½w" << endl;
 	x = _x;
 	y = _y;
 }
 
 Punkt2::Punkt2(const Punkt2& p) {
-	std::cout << endl << "Objekt zosta³ utworzony konstruktorem kopiuj¹cym" << endl;
+	std::cout << endl << "Objekt zostaï¿½ utworzony konstruktorem kopiujï¿½cym" << endl;
 	x = p.x;
 	y = p.y;
+}
+
+Punkt2::Punkt2(Punkt2 &&p){
+	std::cout << endl << "Objekt zostaï¿½ utworzony konstruktorem przenoszÄ…cym" << endl;
+	x = p.x;
+	y = p.y;
+	p.x = 0;
+	p.y = 0;
 }
 
 Punkt2 Punkt2::operator+(const Punkt2& p) const{
@@ -40,7 +48,7 @@ Punkt2 Punkt2::operator-(const Punkt2& p) const {
 	return Punkt2(x - p.getX(), y - p.getY());
 }
 
-//kopiuj¹cy operator przypisania
+//kopiujï¿½cy operator przypisania
 Punkt2& Punkt2::operator=(const Punkt2& p) {
 	if (&p != this) {
 		x = p.x;
@@ -52,12 +60,12 @@ Punkt2& Punkt2::operator=(const Punkt2& p) {
 Punkt2& Punkt2::operator=(const Punkt2&& p) {
 	x = p.x;
 	y = p.y;
-	std::cout << "Uruchomi³ siê przenosz¹cy  opertor przypisania " << std::endl;
+	std::cout << "Uruchomiï¿½ siï¿½ przenoszï¿½cy  opertor przypisania " << std::endl;
 	return *this;
 }
 
 
-//iloczyn skalarny -> zwracaj¹cy double
+//iloczyn skalarny -> zwracajï¿½cy double
 double Punkt2::operator*(const Punkt2& p) const {
 	return ((x * p.getX()) + (y * p.getY()));
 }

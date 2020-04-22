@@ -16,15 +16,15 @@ class MapPolygon : public Polygon
 
 public:
 	/*konstruktory*/
-	//konstruktor domyœlny
+	//konstruktor domyï¿½lny
 	MapPolygon();
-	//konstruktor w pe³ni sparametryzowany
+	//konstruktor w peï¿½ni sparametryzowany
 	MapPolygon(Punkt2* _vertices, int _count, int _borderWidth, RGBA _borderColor, RGBA _fillColor, int opacity);
-	//konstruktor kopiuj¹cy
+	//konstruktor kopiujï¿½cy
 	MapPolygon(const MapPolygon& mp);
-	//konstruktor przenosz¹cy
+	//konstruktor przenoszï¿½cy
 	MapPolygon(MapPolygon &&mp);
-	//konstruktor z list¹ <initializer_list>
+	//konstruktor z listï¿½ <initializer_list>
 	MapPolygon(initializer_list <Polygon> p);
 
 	/*SETTERY*/

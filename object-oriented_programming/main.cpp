@@ -168,6 +168,9 @@ int main() {
 	cout << "lab43.getCount();: " << lab43.getCount() << endl;
 	cout << "lab43.getVertex(1)" << lab43.getVertex(0) << endl;
 
+	Punkt2 p1 = Punkt2(1.0, 4.0);
+
+	Punkt2 p2 = move(p1);
 
 	return 0;
 }
