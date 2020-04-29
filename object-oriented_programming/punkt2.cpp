@@ -98,8 +98,16 @@ double Punkt2::getY() const
 	return y;
 }
 
-double Punkt2::getAngle() {
-	return atan2(y, x);
+double Punkt2::getAngle(bool sth) {
+	try {
+		if (sth) {
+			return atan2(y, x);
+		}
+		throw sth; //?
+	} 
+	catch(int x){
+		cout << "ERROR";
+	}
 }
 
 double Punkt2::getRadius() {
@@ -111,6 +119,7 @@ double Punkt2::getDistance(Punkt2 p) {
 }
 
 double Punkt2::PoleTrojkota(Punkt2 p1, Punkt2 p2, Punkt2 p3) {
+
 	double a = p1.getDistance(p2);
 	double b = p2.getDistance(p3);
 	double c = p3.getDistance(p1);

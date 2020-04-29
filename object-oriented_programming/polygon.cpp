@@ -109,7 +109,16 @@ double Polygon::getPerimeter() {
 }
 
 Punkt2 Polygon::getVertex(int i) {
-	return vertices[i];
+	try {
+		if (i < this->count) {
+			return vertices[i];
+		}
+		throw i;
+	}
+	catch (int) {
+		cout << "ERROR";
+	}
+	
 }
 
 Punkt2* Polygon::getVertices() {

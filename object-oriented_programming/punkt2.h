@@ -42,7 +42,7 @@ public:
 
 	//wsp�rz�dne biegunowe
 	double getRadius(); //wylicza promie�
-	double getAngle(); //daje k�t
+	double getAngle(bool sth); //daje k�t
 
 	//odleg�o�� punktu od punktu _p
 	double getDistance(Punkt2 p);
